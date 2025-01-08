@@ -96,11 +96,127 @@
 // console.log(message);
 //IMPORTANT ... and REACT uses it abundantly...
 
-let name = "Alan";
-let message = "hello world";
-let message1 = `back ticks`;
+// let name = "Bob";
+// let message = "hello world";
+// let message1 = `back ticks`;
 
 // console.log(message + "something" + name + message1);
-console.log(
-  `${message}  $ something ${name} this is another string ${message1}`
-);
+// if (name === "Bob") {
+//   console.log(
+//     `${message}  $ something ${name} this is another string ${message1}`
+//   );
+// }
+
+// for(initialization(statement1); condition(statement2); increment/decrement(statement3)){ ......}
+
+// for (let i = 0; i < 10; ++i) {
+//   // console.log(i);
+// }
+
+// let a = 0;
+// console.log(++a);
+// console.log(a);// will output change..
+
+// for (let i = 0; i < 3; i++) {
+//   for (let j = i; j < 3; j++) {
+//     console.log(`${i},${j}`);
+//   }
+// }
+
+// function myFunction() {}
+// // myFunction is a function that does not take any parameters and does not return anything...
+
+// function myFunction2(a, b) {}
+// // myFunction2 is a function that accepts 2 paramters (a,b) but does not return anything...
+
+// function myFunction3(a, b) {
+//   return a + b;
+// }
+// // myFunction3 takes 2 paramters and returns ONE value.....
+// If a funciton does not return anything explicitly... it returns "undefined" by default...
+
+// function add(a, b) {
+//   console.log(a + b);
+//   return a + b;
+// }
+
+// console.log(add(5, 4));
+
+// Function declarations:
+
+// function noop() {}
+// function square(a) {
+//   return a * a;
+// }
+// function add(a, b) {
+//   return a + b;
+// }
+
+// Function Expressions:[only JS allows this]
+// the function here is called "ANONYMOUS FUNCTION"
+// let noop = function () {};
+// let square = function (a) {
+//   return a * a;
+// };
+// let add = function (a, b) {
+//   return a + b;
+// };
+
+// Arrow functions
+
+// let noop = () => {};
+// // let square = (a) => {
+// //   return a;
+// // };
+
+// let square = (a) => a;
+// // let add = (a, b) => {
+// //   return a + b;
+// // };
+// let add = (a, b) => a + b;
+
+// Parameters and arguments
+// function abc() {}
+// function abc1(a) {}
+// function abc2(a, b, c, d, e, f) {}
+
+// function log(a) {
+//   console.log(a);
+// }
+
+// log("correct");
+// log("also", "correct");
+// log();
+
+// arguments
+// function log(a) {
+//   console.log(arguments.length, a, arguments[1]);
+// }
+// log("correct");
+// log("also", "correct");
+// log();
+
+// function sum() {
+//   const count = arguments.length;
+//   let total = 0;
+//   for (let i = 0; i < count; i++) {
+//     total += arguments[i];
+//   }
+//   return total;
+// }
+// console.log(sum(1));
+// console.log(sum(1, 2));
+// console.log(sum(1, 2, 3, 4));
+
+// Parameters and ...(rest operator)
+
+function sum(a, ...numbers) {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
+}
+console.log(sum(1));
+console.log(sum(1, 2));
+console.log(sum(1, 2, 3, 4));
