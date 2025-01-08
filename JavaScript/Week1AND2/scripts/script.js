@@ -101,4 +101,6 @@ let message = "hello world";
 let message1 = `back ticks`;
 
 // console.log(message + "something" + name + message1);
-console.log(`${message} something ${name} this is another string ${message1}`);
+console.log(
+  `${message}  $ something ${name} this is another string ${message1}`
+);
