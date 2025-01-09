@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes of January 9,2025</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+  </head>
+  <body>
+    <h1 id="main1">Elements in HTML</h1>
+    <nav>
+      <a href="#date">Date</a> | <a href="#address">Address</a>|
+      <a href="#abbreviations">Abbreviations</a>| <a href="#code">Code</a>|
+      <a href="#types">Types</a>|<a href="#links">Lining in HTML</a> |
+      <a href="#text">Text</a> | <a href="#media">Media</a> |
+      <a href="#tables">Tables</a>
+    </nav>
+    <h2 id="date">Date</h2>
+    <time datetime="1/9/2025">January 9,2025</time> <br />
+    <time datetime="1/10/2025 17:00">Tomorrow at 5:00 PM</time> <br />
+    <time datetime="1/8/2025">Yesterday</time> <br />
+
+    <h2 id="address">Address</h2>
+    <address>106 Topsail Road, NL N90 2R0</address>
+
+    <h2 id="abbreviations">Abbreviations</h2>
+    <abbr title="Hypertext Markup Language">HTML</abbr>
+    <abbr title="Cascading Style Sheets">CSS</abbr>
+
+    <h2 id="code">Code</h2>
+    <code>console.log("I am javascript");</code>
+
+    <h2 id="types">Types of HTML Elements</h2>
+    <h3>Block Level Elements</h3>
+    <p>
+      The occupy a complete block, and do not allow anything to before or after
+      them. &lt;div&gt;, &lt;h1&gt; etc
+    </p>
+    <h3>Inline Elements</h3>
+    <p>
+      The do not occupy the block, rather they will flow with the code..<a
+        href="https://www.google.com"
+        >Google</a
+      >This will be linked to the google
+    </p>
+
+    <h2 id="links">Linking in HTML</h2>
+    We use &lt;a&gt; tag to make links in html document:
+    <h3>External Linking</h3>
+    <p>
+      When we link some text with some website OR with some other page of our
+      own website... For example:
+      <a href="https://www.google.com">Google</a> will link this to the
+      google.com. Also <a href="../index.html">Home Page</a>
+    </p>
+    <h3>Internal Linking</h3>
+    <p>
+      When we make a link within a page. This is also called fragment of the
+      page and accessing the fragment..
+      <a href="#main1">Top</a>
+    </p>
+    <h2 id="text">Text and Paragraphs</h2>
+    We have &lt;p&gt; element to represent text paragraph -
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et at, aliquam
+      aperiam sunt, eligendi sint unde libero corrupti reprehenderit sapiente
+      soluta. Atque odit enim eos omnis nemo quos mollitia quam?
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis magni
+      earum vitae eaque, obcaecati minima amet quaerat in voluptate praesentium
+      enim voluptatibus cumque? Incidunt dolor, veniam ut esse vel suscipit.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit odit ullam
+      blanditiis ducimus error? Aliquam itaque eum eveniet? Veniam illo, sit nam
+      sed cumque vitae dicta. Cumque delectus consequatur dolore.
+    </p>
+
+    <h2 id="media">Media</h2>
+    <h3>Images</h3>
+    we use &lt;img&gt; to bring images.
+    <img src="../images/image1.jpg" alt="some tree" width="300" />
+    <br />
+    &lt;figure&gt; element:
+    <figure>
+      <figcaption>My favourite</figcaption>
+      <img src="../images/image2.jpg" alt="some tree" width="300" />
+    </figure>
+
+    <h3>Video</h3>
+    To bring videos we use &lt;video&gt; element:
+
+    <video src="../videos/abc.mp4" width="300" autoplay controls></video>
+
+    <iframe
+      width="300"
+      height="215"
+      src="https://www.youtube.com/embed/ZdQweZuxR3E?si=jDq71k3gNZ3LDpHu"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <h2 id="tables">Tables in HTML</h2>
+    We use &lt;table&gt; element to create tables:
+    <table width="100%">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>Alan Smith</td>
+        <td>20</td>
+        <td>alan@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Aron</td>
+        <td>23</td>
+        <td>aron@gmail.com</td>
+      </tr>
+    </table>
+
+    <h5>Specail Tables</h5>
+
+    <table width="70%">
+      <tr>
+        <th colspan="2">A</th>
+      </tr>
+      <tr>
+        <td rowspan="2">B</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td>D</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>F</td>
+      </tr>
+    </table>
+    <h5>Semantics in Tables</h5>
+    <table width="70%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Footer</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
