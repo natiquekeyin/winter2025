@@ -190,9 +190,9 @@
 
 // arguments
 // function log(a) {
-//   console.log(arguments.length, a, arguments[1]);
+//   console.log(arguments.length, a, arguments[0]);
 // }
-// log("correct");
+// log("correct"); //1 correct correct
 // log("also", "correct");
 // log();
 
@@ -204,13 +204,16 @@
 //   }
 //   return total;
 // }
-// console.log(sum(1));
-// console.log(sum(1, 2));
-// console.log(sum(1, 2, 3, 4));
+// console.log(sum(1));  //1
+// console.log(sum(1, 2)); //3
+// console.log(sum(1, 2, 3, 4)); //10
 
+// January 14,2025: Lecture starts here...
+// ()=>{ }, ? :, ...
 // Parameters and ...(rest operator)
 
-function sum(a, ...numbers) {
+// ... gives me a chance to give name to the argument array (by default: arguments, BUT we have used ...numbers, means we want the argument array to have a name of numbers)
+function sum(a, b, ...numbers) {
   let total = 0;
   for (let i = 0; i < numbers.length; i++) {
     total += numbers[i];
