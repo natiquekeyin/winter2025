@@ -44,10 +44,10 @@
 // anynumber + undefined = NaN
 // undefined + undefined = NaN
 
-f();
+// f();
 
-function f() {
-  var y = x + 1;
-  var x = 2;
-  console.log(x, y);
-}
+// function f() {
+//   var y = x + 1;
+//   var x = 2;
+//   console.log(x, y);
+// }
