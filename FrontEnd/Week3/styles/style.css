@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 30px;
+}
+
+h1 {
+  color: green;
+  background-color: azure;
+}
+p {
+  font-size: 0.7rem;
+  /* 64px */
+  /* 16px = 12pt = 100% = 1 em */
+}
+
+#d1 {
+  font-size: 2rem;
+  /* 32px */
+}
+
+/*  em and rem??? */
