@@ -20,7 +20,15 @@ p {
 
 #d1 {
   font-size: 2rem;
-  /* 32px */
+  border: 1px solid green;
+  margin: 10px;
+  width: 400px;
+  padding: 10px;
 }
 
-/*  em and rem??? */
+#d2 {
+  margin: 10px;
+  width: 400px;
+  border: 10px solid green;
+  padding: 10px;
+}
