@@ -1,0 +1,9 @@
+Object Oriented Programming in JavaScript (OOP)
+    OOP is based on the concepts of Class and Object:
+
+    Class: combination of Code and Data (Code: Functions, Data: Variables)
+
+    Object: "class" is not USABLE by itself, rather we create "Objects" of the class, that emulate the behavior of the class(objects have all the properties and methods of a class)
+    Objects are also called "instantiation of the class".. instances of the class...
+
+In classical javascript( NOT ES5 ES6) there was no concept of a class. But there was concept of a special method called "constructor" that could be used to create objects.
