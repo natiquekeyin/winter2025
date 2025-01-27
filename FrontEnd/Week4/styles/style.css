@@ -1,0 +1,49 @@
+.box {
+  width: 400px;
+  height: 400px;
+  border: 5px solid green;
+  margin: 20px auto;
+  /* position: relative; */
+}
+
+.item1,
+.item2 {
+  width: 200px;
+  height: 200px;
+}
+
+.item1 {
+  background-color: #508aa8;
+  height: 50px;
+  width: 100%;
+  /* position: absolute;
+   */
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  position: sticky;
+  /* left: 40px; */
+  top: 0px;
+}
+.item2 {
+  background-color: wheat;
+}
+
+/* if setting absolute for an element, setup "relative" to the parent first... */
+
+/* sticky is switching between static and fixed */
+/* absolute .. be default it is positioned to its closest ancester(usually body)if you define relative position on a parent element then it is going to be positioned according to that context */
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  /* combination of inline and block properties... block properties ... inline properties... */
+}
+
+/* CSS GRID */
