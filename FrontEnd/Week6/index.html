@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Forms in HTML</h1>
+    <form action="/submit" method="GET">
+      <div>
+        <label for="nm">Name</label>
+        <input
+          type="text"
+          name="nm"
+          id="nm"
+          maxlength="30"
+          autofocus
+          placeholder="Enter your name here"
+          tabindex="1"
+        />
+      </div>
+      <div>
+        <label for="pwd">Password</label>
+        <input type="password" name="pwd" id="pwd" />
+      </div>
+      <div>
+        <label for="course">Courses</label>
+        <input type="text" list="subjects" name="course" />
+
+        <datalist id="subjects">
+          <option value="Front-End"></option>
+          <option value="JavaScript"></option>
+          <option value="UI/UX"></option>
+        </datalist>
+      </div>
+
+      <div>
+        <label for="txtArea">Comments</label>
+        <textarea
+          name="comments"
+          id="txtArea"
+          rows="10"
+          cols="10"
+          placeholder="Enter your comments here"
+        ></textarea>
+      </div>
+
+      <div>
+        <input type="submit" value="SEND" />
+        <input type="reset" value="CLEAR" />
+      </div>
+    </form>
+  </body>
+</html>
+
+<!-- when form is submitted, send data to data.php -->
+<!-- QueryString???? -->
