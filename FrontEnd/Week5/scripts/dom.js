@@ -75,9 +75,9 @@ window.addEventListener("DOMContentLoaded", function () {
     cat.src = nextImageUrl();
   }, 3000);
 
-  this.setTimeout(function () {
-    alert("5 seconds gone");
-  }, 5000);
+  // this.setTimeout(function () {
+  //   alert("5 seconds gone");
+  // }, 5000);
 });
 
 // these urls should be linked to themselves like when I click on them they should open the respective picture in a new tab....
