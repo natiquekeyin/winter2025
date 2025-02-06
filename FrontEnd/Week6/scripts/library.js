@@ -55,4 +55,24 @@ window.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#box").remove();
     }, 3000);
   }
+
+  this.document.querySelector("#area").addEventListener("click", handleDelete);
+
+  function handleDelete(e) {
+    // console.log(e.target);
+    deleteBook(e.target); //we will pass the element to delete
+    e.preventDefault();
+  }
+
+  function deleteBook(elemToDelete) {
+    if (elemToDelete.className === "delete") {
+      elemToDelete.parentElement.parentElement.remove();
+    } else {
+      showAlert("WRONG AREA CLICKED", "error");
+    }
+  }
 });
+
+// COMPLETED:...
+// Convert this code into real OOP....
+// "class" keyword... and "object" in ES5 ES6
