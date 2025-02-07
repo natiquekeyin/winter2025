@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Session!</title>
+    <script src="./scripts/script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>Review Session - Friday February7,2025</h1>
+    <form id="form">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="firstName" />
+      </div>
+      <div>
+        Gender:
+        <label for="">
+          <input type="radio" id="male" value="Male" name="gender" />Male</label
+        >
+        <label for="">
+          <input
+            type="radio"
+            id="female"
+            value="Female"
+            name="gender"
+          />Female</label
+        >
+        <label for="">
+          <input
+            type="radio"
+            id="other"
+            value="other"
+            name="gender"
+          />Other</label
+        >
+      </div>
+
+      <div>
+        Subjects:
+        <label for=""> <input type="checkbox" id="ui" value="UI" />UI</label>
+        <label for="">
+          <input type="checkbox" id="frontend" value="Front End" />Front
+          End</label
+        >
+        <label for="">
+          <input
+            type="checkbox"
+            id="javascript"
+            value="JavaScript"
+          />JavaScript</label
+        >
+      </div>
+      <div>
+        <input type="submit" value="SEND" />
+        <input type="reset" value="CLEAR" />
+      </div>
+    </form>
+
+    <div id="output">
+      <!-- prepare my elements and insert them over here... -->
+    </div>
+  </body>
+</html>
