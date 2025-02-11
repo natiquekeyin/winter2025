@@ -44,6 +44,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     deleteBook(elemToDelete) {
       if (elemToDelete.className === "delete") {
+        elemToDelete.parentNode.parentNode.remove();
       } else {
         showAlert("WRONG AREA CLICKED", "error");
       }
