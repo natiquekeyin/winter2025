@@ -94,7 +94,7 @@ window.addEventListener("DOMContentLoaded", function () {
         let users = JSON.parse(this.responseText);
 
         users.data.forEach(function (user) {
-          output += `<div><h3>${user.last_name}</h3><img src = "${user.avatar}"/><p>${user.email}</p></div>`;
+          output += `<div class="box"><h3>${user.last_name}</h3><img src = "${user.avatar}" class="profile"/><p>${user.email}</p></div>`;
         });
       }
 
