@@ -18,3 +18,5 @@ p.then(function (message) {
 }).catch(function (message) {
   console.log("Failed", message);
 });
+
+// fetch API....
