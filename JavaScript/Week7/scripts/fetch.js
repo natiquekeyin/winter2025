@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", function () {
           document.querySelector(
             "#output"
           ).innerHTML += `<div class="box"><h3>${user.id}</h3><p>${user.first_name}</p><p>${user.last_name}</p>
-          <img src = "${user.avatar}" alt="profile" class="profile"/></div>`;
+          <img src = "${user.avatar}" alt="profile" class="profile"/> <br/> <a href="${user.avatar}"> <button>More</button></a> </div>`;
         });
       });
   });
