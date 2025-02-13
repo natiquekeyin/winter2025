@@ -1,0 +1,1 @@
+This is some random text in "test.txt". Btn1 will read this text and display on HTML .. by using asynchronous (XMLHttpRequest)

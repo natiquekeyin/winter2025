@@ -11,19 +11,14 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     addBookToList(book) {
-      if (book.title === "" || book.isbn === "" || book.author === "") {
-        this.showAlert("Please fill all fields", "error");
-      } else {
-        let row = document.createElement("tr");
-        row.innerHTML = `<td>${book.title}</td><td>${book.isbn}</td><td>${book.author}</td><td><button class="delete">Delete</button> </td>`;
-        // console.log(row);
-        // Step6: Now append this row to the table on HTML page...
+      let row = document.createElement("tr");
+      row.innerHTML = `<td>${book.title}</td><td>${book.isbn}</td><td>${book.author}</td><td><button class="delete">Delete</button> </td>`;
+      // console.log(row);
+      // Step6: Now append this row to the table on HTML page...
 
-        document.querySelector("#list").appendChild(row);
-        this.clearFields();
-        // this.showAlert("Book successfully added", "success");
-        // clearFields();
-      }
+      document.querySelector("#list").appendChild(row);
+
+      this.clearFields();
     }
 
     clearFields() {
@@ -45,17 +40,36 @@ window.addEventListener("DOMContentLoaded", function () {
 
     deleteBook(elemToDelete) {
       if (elemToDelete.className === "delete") {
+        let isbn =
+          elemToDelete.parentElement.previousElementSibling
+            .previousElementSibling.textContent;
+        elemToDelete.parentElement.parentElement.remove();
+        Store.removeBook(isbn);
+        this.showAlert("Book Successfully deleted", "success");
       } else {
-        showAlert("WRONG AREA CLICKED", "error");
+        this.showAlert("WRONG AREA CLICKED", "error");
       }
     }
   }
-
   let form = this.document.querySelector("#form1");
+  form.addEventListener("submit", (evt) => {
+    if (
+      this.document.querySelector("#title").value != "" &&
+      this.document.querySelector("#isbn").value != "" &&
+      this.document.querySelector("#author").value != ""
+    ) {
+      handleSubmit();
+    } else {
+      let book = new Book();
+      book.showAlert("ALl fields should be filled", "error");
+    }
 
-  form.addEventListener("submit", handleSubmit);
+    evt.preventDefault();
+  });
 
-  function handleSubmit(e) {
+  //form.addEventListener("submit", handleSubmit);
+
+  function handleSubmit() {
     let title = document.querySelector("#title").value;
     let isbn = document.querySelector("#isbn").value;
     let author = document.querySelector("#author").value;
@@ -67,9 +81,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     book.addBookToList(book);
     book.showAlert("Book Successfully added", "success");
-    Store.addBook(book); //addBook is a class level method
-
-    e.preventDefault();
+    Store.addBook(book);
+    //e.preventDefault();
   }
 
   this.document.querySelector("#area").addEventListener("click", handleDelete);
