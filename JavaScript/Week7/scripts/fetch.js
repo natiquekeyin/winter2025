@@ -5,11 +5,19 @@ window.addEventListener("DOMContentLoaded", function () {
   btn1.addEventListener("click", function () {
     fetch("../data/test.txt")
       .then((response) => {
-        console.log(response);
+        // console.log(response);
+        if (!response.ok) {
+          throw new Error("Not found - file may be deleted or not there");
+        }
         return response.text();
       })
       .then((data) => {
         document.querySelector("#output").innerHTML = data;
+      })
+      .catch((error) => {
+        document.querySelector(
+          "#output"
+        ).innerHTML = `File NOT found: ${error}`;
       });
   });
 
