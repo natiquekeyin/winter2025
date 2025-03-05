@@ -2,14 +2,22 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import History from "./components/History";
 
 function App() {
-  let myName = "Alan Smith";
   return (
     <>
-      <h1>React Application by Keyin College - {myName}</h1>
-      <p>This is first text in our project - {2 + 9}</p>
-      <h2 className="demo">Welcome {myName.toUpperCase()}</h2>
+      <h1 className="demo">First React App</h1>
+      <History title="Canada" text="This is great Canada history here......" />
+      <hr />
+      <History title="Maxico" text="This is Maxico, you will love it" />
+      <hr />
+      <History title="Australia" text="This is Australia history here" />
+      <Contact />
+      <hr />
+      <About />
     </>
   );
 }
