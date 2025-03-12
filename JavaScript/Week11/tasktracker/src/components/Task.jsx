@@ -1,15 +1,15 @@
-import { FaAddressBook } from "react-icons/fa";
-import { FaAnchor } from "react-icons/fa";
-const Task = ({ task }) => {
+import { FaTimes } from "react-icons/fa";
+const Task = ({ task, onDelete, onToggle }) => {
   return (
-    <div className="task">
+    <div
+      className={`task ${task.reminder ? "reminder" : ""}`}
+      onDoubleClick={() => onToggle(task.id)}
+    >
       <h3>
-        <FaAddressBook style={{ color: "green", cursor: "pointer" }} />{" "}
-        {task.text}
+        {task.text}{" "}
+        <FaTimes onClick={() => onDelete(task.id)} style={{ color: "red" }} />
       </h3>
-      <p>
-        {task.day} <FaAnchor />
-      </p>
+      <p>{task.day}</p>
     </div>
   );
 };

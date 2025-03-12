@@ -45,3 +45,12 @@ body {
   cursor: pointer;
   padding: 7px;
 }
+
+.task h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}

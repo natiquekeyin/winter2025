@@ -17,13 +17,45 @@ function App() {
       day: "March 29,2025 at 5:00pm",
       reminder: false,
     },
+    {
+      id: 3,
+      text: "GYM Appointment",
+      day: "April 1,2025 at 3:00pm",
+      reminder: false,
+    },
   ]);
+
+  // Delete a task
+
+  const deleteTask = (id) => {
+    // go and use the setTasks and remove the task with passed id and show rest of them
+    // filter( )
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
+  // Toggle reminder
+
+  const toggleReminder = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      )
+    );
+  };
 
   return (
     <>
       <div className="container">
         <Header title="Task Tracker" />
-        {tasks.length > 0 ? <Tasks tasks={tasks} /> : "No tasks to display"}
+        {tasks.length > 0 ? (
+          <Tasks
+            tasks={tasks}
+            onDelete={deleteTask}
+            onToggle={toggleReminder}
+          />
+        ) : (
+          "No tasks to display"
+        )}
       </div>
     </>
   );
