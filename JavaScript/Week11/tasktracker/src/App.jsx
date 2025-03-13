@@ -3,30 +3,12 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
 import AddTask from "./components/AddTask";
+import Ueffect from "./components/topics/Ueffect";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: "Doctor's Appointment",
-      day: "March 19,2025 at 5:00pm",
-      reminder: true,
-    },
-    {
-      id: 2,
-      text: "School Appointment",
-      day: "March 29,2025 at 5:00pm",
-      reminder: false,
-    },
-    {
-      id: 3,
-      text: "GYM Appointment",
-      day: "April 1,2025 at 3:00pm",
-      reminder: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
-  const [showAddTask, setShowAddTask] = useState(true);
+  const [showAddTask, setShowAddTask] = useState(false);
   // Delete a task
 
   const deleteTask = (id) => {
@@ -48,13 +30,22 @@ function App() {
   // To add a new task
 
   const addTask = (task) => {
-    console.log("Add Task here", task);
+    //  produce and id..
+    const id = Math.floor(Math.random() * 1000) + 1;
+    // let id = tasks.length + 1;
+    const newTask = { id, ...task };
+
+    setTasks([...tasks, newTask]);
   };
   return (
     <>
       <div className="container">
-        <Header title="Task Tracker" />
-        {showAddTask && <AddTask onAdd={addTask} />}
+        <Header
+          title="Task Tracker"
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
+        />
+        {/* {showAddTask && <AddTask onAdd={addTask} />}
         {tasks.length > 0 ? (
           <Tasks
             tasks={tasks}
@@ -63,7 +54,9 @@ function App() {
           />
         ) : (
           "No tasks to display"
-        )}
+        )} */}
+
+        <Ueffect />
       </div>
     </>
   );
