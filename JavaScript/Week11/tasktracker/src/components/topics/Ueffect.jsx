@@ -6,7 +6,7 @@ const Ueffect = () => {
   const [count, setCount] = useState(0);
   useEffect(() => {
     console.log("use effect working");
-  });
+  }, [count]);
 
   return (
     <div>
