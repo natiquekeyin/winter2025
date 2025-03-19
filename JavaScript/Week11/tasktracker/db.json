@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "id": "1d4e",
-      "text": "GYM",
-      "day": "April 1,2025",
-      "reminder": true
-    },
-    {
       "id": "da86",
       "text": "Meeting",
       "day": "March 29,2025",
@@ -16,7 +10,13 @@
       "id": "6652",
       "text": "Grocery",
       "day": "March 28,2025",
-      "reminder": false
+      "reminder": true
+    },
+    {
+      "id": "ea7c",
+      "text": "abc",
+      "day": "xs",
+      "reminder": true
     }
   ]
 }
