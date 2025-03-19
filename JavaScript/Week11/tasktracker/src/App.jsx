@@ -6,6 +6,7 @@ import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import UState from "./components/topics/UState";
+import TaskDetails from "./components/TaskDetails";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -18,7 +19,6 @@ function App() {
     const getTasks = async () => {
       const tasksFromServer = await fetchTasks();
       setTasks(tasksFromServer);
-      console.log(await fetch("http://localhost:5000/tasks/2"));
     };
 
     getTasks();
@@ -123,6 +123,8 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/topics" element={<UState />} />
+
+          <Route path="/task/:id" element={<TaskDetails />} />
         </Routes>
         <Footer />
       </div>
