@@ -21,5 +21,13 @@ describe("Counter", () => {
     await user.click(incrementButton2);
     await user.click(incrementButton2);
     expect(countElement2).toHaveTextContent("2");
+
+    const amountInput = screen.getByRole("spinbutton");
+    await user.type(amountInput, "20");
+    expect(amountInput).toHaveValue(20);
+
+    const setButton = screen.getByRole("button", { name: "Set Amount" });
+    await user.click(setButton);
+    expect(countElement2).toHaveTextContent("20");
   });
 });
