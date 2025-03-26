@@ -1,4 +1,13 @@
+import { useState, useEffect } from "react";
+
 const Users = ({ users }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoggedIn(true);
+    }, 500);
+  }, []);
   return (
     <>
       <ul>
@@ -6,6 +15,12 @@ const Users = ({ users }) => {
           return <li key={user}>{user}</li>;
         })}
       </ul>
+
+      {isLoggedIn ? (
+        <button>Start Learning</button>
+      ) : (
+        <button onClick={() => setIsLoggedIn(true)}>Login</button>
+      )}
     </>
   );
 };
